@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 
 import he from "he";
 import { GameArea } from "./GameArea";
+import Confetti from "react-confetti";
 
 let score = 0;
 
@@ -19,17 +20,22 @@ export const Game = (props) => {
     score = 0;
     setShowScore((prevValue) => !prevValue);
   };
+  const { width, height } = { width: 600, height: 900 };
 
   return (
     <div className="game-wrapper">
       {props.newQuestions.map((question) => {
         return (
-          <GameArea
-            key={uuidv4}
-            {...question}
-            correct={correct}
-            showScore={showScore}
-          />
+          <div>
+            {showScore && <Confetti width={width} height={height} />}
+
+            <GameArea
+              key={uuidv4}
+              {...question}
+              correct={correct}
+              showScore={showScore}
+            />
+          </div>
         );
       })}
       <div className="button-wrapper">
