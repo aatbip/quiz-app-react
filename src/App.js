@@ -13,6 +13,13 @@ export const App = () => {
     setStartScreen(false);
     setCategoryId(data.categoryId);
   }
+
+  function reloadGame() {
+    setStartScreen(true);
+    setNewQuestions([]);
+    setCategoryId();
+  }
+
   const GET_QUIZ_API = `https://opentdb.com/api.php?amount=5&category=${categoryId}`;
 
   React.useEffect(() => {
@@ -39,7 +46,7 @@ export const App = () => {
       {startScreen ? (
         <Start startButtonClick={startButtonClick} />
       ) : (
-        <Game newQuestions={newQuestions} />
+        <Game newQuestions={newQuestions} reloadGame={reloadGame} />
       )}
     </div>
   );

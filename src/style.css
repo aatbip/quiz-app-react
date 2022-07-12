@@ -21,7 +21,8 @@ body {
 }
 
 .wrapper {
-  width: 70%;
+  width: 80%;
+  min-width: 376px; 
   overflow: hidden;
   margin: 0 auto;
   margin-top: 40px;
@@ -184,11 +185,16 @@ li {
 .button-wrapper {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .button-wrapper p {
   margin-top: 20px;
-  margin-right: 20px;
+  margin-right: 10px;
+  margin-left: 10px; 
+  line-height: 12px;
+  align-self: center;
+
 }
 
 .check-answer {

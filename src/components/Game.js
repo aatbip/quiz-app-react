@@ -15,6 +15,11 @@ export const Game = (props) => {
     }
   };
 
+  const resetGame = () => {
+    score = 0;
+    setShowScore((prevValue) => !prevValue);
+  };
+
   return (
     <div className="game-wrapper">
       {props.newQuestions.map((question) => {
@@ -33,7 +38,11 @@ export const Game = (props) => {
           <button
             type="button"
             class="check-answer"
-            onClick={() => window.location.reload()}
+            // onClick={() => window.location.reload()}
+            onClick={() => {
+              props.reloadGame();
+              resetGame();
+            }}
           >
             Play Again
           </button>
