@@ -22,7 +22,7 @@ body {
 
 .wrapper {
   width: 80%;
-  min-width: 376px; 
+  min-width: 376px;
   overflow: hidden;
   margin: 0 auto;
   margin-top: 40px;
@@ -192,10 +192,9 @@ li {
 .button-wrapper p {
   margin-top: 20px;
   margin-right: 10px;
-  margin-left: 10px; 
+  margin-left: 10px;
   line-height: 12px;
   align-self: center;
-
 }
 
 .check-answer {
@@ -212,4 +211,13 @@ li {
 .check-answer:hover {
   opacity: 0.9;
   cursor: pointer;
+}
+
+@media (max-width: 420px) {
+  .game-wrapper {
+    margin-top: 0px;
+  }
+  .wrapper {
+    margin-top: 0px;
+  }
 }

@@ -68,7 +68,16 @@ export const Start = (props) => {
               Start Quiz
             </button>
           </div>
-          <p style={{fontSize: "10px"}}>AATBIP DEV</p>
+          <p
+            style={{
+              fontSize: "10px",
+              marginTop: "5em",
+              position: "relative",
+              top: "20em",
+            }}
+          >
+            &copy; AAT BIP DEV
+          </p>
         </div>
       </div>
     </div>
